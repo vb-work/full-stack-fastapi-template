@@ -14,7 +14,7 @@ def test_post_citydate(base_url, sample_city_data):
     if response.status_code == 200:
         assert (
             response.json()["message"]
-            == f"Received data for {sample_city_data['city']} on {sample_city_data['date']}"
+            == f"Collected data for {sample_city_data['city']} on {sample_city_data['date']}"
         )
     elif response.status_code == 400:
         assert (
